@@ -1,0 +1,68 @@
+{
+  "model": "gpt-3.5-turbo",
+  "temperature": 0.2,
+  "messages": [
+    {
+      "role": "system",
+      "content": "Write the test cases for the following software requirement"
+    },
+    {
+      "role": "user",
+      "content": "The ability to put items in a shopping cart"
+    }
+  ]
+}
+
+{
+  "id": "chatcmpl-83TRwf4JdkhSxdXS4NM9QExNtWpTl",
+  "object": "chat.completion",
+  "created": 1695838880,
+  "model": "gpt-3.5-turbo-0613",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "1. Test case: Adding a single item to the shopping cart\n   - Input: Selecting a product and clicking on the \"Add to Cart\" button\n   - Expected output: The selected item should be added to the shopping cart\n\n2. Test case: Adding multiple items to the shopping cart\n   - Input: Selecting multiple products and clicking on the \"Add to Cart\" button for each product\n   - Expected output: All selected items should be added to the shopping cart\n\n3. Test case: Adding an item with different variations (e.g., size, color) to the shopping cart\n   - Input: Selecting a product with different variations and choosing the desired options before clicking on the \"Add to Cart\" button\n   - Expected output: The selected item with the chosen variations should be added to the shopping cart\n\n4. Test case: Adding an out-of-stock item to the shopping cart\n   - Input: Selecting an item that is currently out of stock and clicking on the \"Add to Cart\" button\n   - Expected output: An error message should be displayed, indicating that the item is out of stock and cannot be added to the shopping cart\n\n5. Test case: Adding an item to the shopping cart from different pages\n   - Input: Navigating to different pages (e.g., home page, category page, product page) and adding an item to the shopping cart from each page\n   - Expected output: The selected items from different pages should be added to the shopping cart\n\n6. Test case: Adding a large quantity of items to the shopping cart\n   - Input: Selecting a product and specifying a large quantity (e.g., 100) before clicking on the \"Add to Cart\" button\n   - Expected output: The specified quantity of the selected item should be added to the shopping cart\n\n7. Test case: Adding an item to the shopping cart without being logged in\n   - Input: Selecting a product and clicking on the \"Add to Cart\" button without being logged in to the system\n   - Expected output: The system should prompt the user to log in or create an account before adding the item to the shopping cart\n\n8. Test case: Adding an item to the shopping cart with invalid input\n   - Input: Providing invalid or incorrect information (e.g., negative quantity, invalid product ID) before clicking on the \"Add to Cart\" button\n   - Expected output: The system should display an error message, indicating that the input is invalid and the item cannot be added to the shopping cart"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 29,
+    "completion_tokens": 524,
+    "total_tokens": 553
+  }
+}
+
+1. Test case: Adding a single item to the shopping cart
+   - Input: Selecting a product and clicking on the "Add to Cart" button
+   - Expected output: The selected item should be added to the shopping cart
+
+2. Test case: Adding multiple items to the shopping cart
+   - Input: Selecting multiple products and clicking on the "Add to Cart" button for each product
+   - Expected output: All selected items should be added to the shopping cart
+
+3. Test case: Adding an item with different variations (e.g., size, color) to the shopping cart
+   - Input: Selecting a product with different variations and choosing the desired options before clicking on the "Add to Cart" button
+   - Expected output: The selected item with the chosen variations should be added to the shopping cart
+
+4. Test case: Adding an out-of-stock item to the shopping cart
+   - Input: Selecting an item that is currently out of stock and clicking on the "Add to Cart" button
+   - Expected output: An error message should be displayed, indicating that the item is out of stock and cannot be added to the shopping cart
+
+5. Test case: Adding an item to the shopping cart from different pages
+   - Input: Navigating to different pages (e.g., home page, category page, product page) and adding an item to the shopping cart from each page
+   - Expected output: The selected items from different pages should be added to the shopping cart
+
+6. Test case: Adding a large quantity of items to the shopping cart
+   - Input: Selecting a product and specifying a large quantity (e.g., 100) before clicking on the "Add to Cart" button
+   - Expected output: The specified quantity of the selected item should be added to the shopping cart
+
+7. Test case: Adding an item to the shopping cart without being logged in
+   - Input: Selecting a product and clicking on the "Add to Cart" button without being logged in to the system
+   - Expected output: The system should prompt the user to log in or create an account before adding the item to the shopping cart
+
+8. Test case: Adding an item to the shopping cart with invalid input
+   - Input: Providing invalid or incorrect information (e.g., negative quantity, invalid product ID) before clicking on the "Add to Cart" button
+   - Expected output: The system should display an error message, indicating that the input is invalid and the item cannot be added to the shopping cart

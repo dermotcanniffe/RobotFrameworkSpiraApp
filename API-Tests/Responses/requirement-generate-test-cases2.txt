@@ -1,0 +1,9 @@
+1. Test case: Valid login credentials
+ - Description: Verify that the user is able to login successfully with valid username and password.
+ - Input: Valid username and password
+ - Expected output: User should be logged in and redirected to t…n page.
+
+10. Test case: Login page accessibility
+ - Description: Verify that the login page is accessible to users with disabilities.
+ - Input: Use assistive technologies like screen readers to access the login page
+ - Expected output: Login page should be accessible and all elements should be properly read by the screen reader."

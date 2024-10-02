@@ -1,0 +1,7 @@
+<log type="Session" name="OOD:AdamSandman" at="2023-10-01 18:45:15.981"/>
+<log type="Test" name="OpenAI" status="Info"  at="2023-10-01 18:45:16.251"><data type="text">Executing Script: C:\Git\SpiraTeam\InflectraSpiraAppDevelopment\ChatGPT\API-Tests\OpenAI\Main.js</data>
+<data type="text">Entry Point: Test</data>
+</log>
+<log type="Test" name="OpenAI" status="Unresolved" closed="OpenAI" _guid="undefined"  at="2023-10-01 18:45:16.257" comment="Passed:0 Failed:0 Time:0.216s" />
+<log type="Message" name="Screen flow" status="Info"  at="2023-10-01 18:45:16.270"><data type="link" url="C:\Git\SpiraTeam\InflectraSpiraAppDevelopment\ChatGPT\API-Tests\OpenAI\Reports\2023-10-01_18-45-16/index.html" text="C:\Git\SpiraTeam\InflectraSpiraAppDevelopment\ChatGPT\API-Tests\OpenAI\Reports\2023-10-01_18-45-16/index.html"/>
+</log>

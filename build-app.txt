@@ -1,0 +1,3 @@
+cd "C:\Git\SpiraAppBundler"
+
+npm run build --input="C:\Git\SpiraTeam\InflectraSpiraAppDevelopment\ChatGPT" --output="C:\Git\SpiraTeam\SpiraTest\SpiraAppBundles"

@@ -1,0 +1,31 @@
+Feature: Shopping Cart
+  As a user
+  I want to be able to put items in a shopping cart
+  So that I can keep track of the items I want to purchase
+
+  Scenario: Add item to shopping cart
+    Given I am on the product page
+    When I click on the \"Add to Cart\" button for a specific item
+    Then the item should be added to the shopping cart
+
+  Scenario: View items in shopping cart
+    Given I have added items to the shopping cart
+    When I click on the \"View Cart\" button
+    Then I should be redirected to the shopping cart page
+    And I should see the list of items in the shopping cart
+
+  Scenario: Remove item from shopping cart
+    Given I have added items to the shopping cart
+    When I click on the \"Remove\" button for a specific item in the shopping cart
+    Then the item should be removed from the shopping cart
+
+  Scenario: Update quantity of item in shopping cart
+    Given I have added items to the shopping cart
+    When I change the quantity of a specific item in the shopping cart
+    Then the quantity of the item in the shopping cart should be updated
+
+  Scenario: Empty shopping cart
+    Given I have added items to the shopping cart
+    When I click on the \"Empty Cart\" button
+    Then the shopping cart should be cleared
+    And I should see a message indicating that the cart is empty"

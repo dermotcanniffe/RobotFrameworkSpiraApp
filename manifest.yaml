@@ -1,0 +1,166 @@
+guid: 13deb39d-1adb-4def-bbcb-8052c82824dc
+name: chatGPT
+caption: ChatGPT
+summary: Lets you generate test cases, tasks, risks, or BDD scenarios from Spira requirements using the ChatGPT generative AI engine from OpenAI.
+description: >-
+  This SpiraApp lets you generate test cases, tasks, risks, or BDD scenarios from requirements using the ChatGPT engine developed by OpenAI.
+  The current functionality uses the power of generative AI to suggest probable test cases with steps from requirements, generate the likely
+  development tasks for the requirement, generate the BDD scenarios for the requirement, and identify common business and technical risks.
+productSummary: Lets you generate test cases, tasks, BDD steps, and risks using ChatGPT's generative AI in this product
+productDescription: >- 
+  On this page you can customize the prompts and regular expressions used for parsing the returned data from OpenAI. You can also change the 'temperature'
+  of the OpenAI API call. A higher temperature will give a more creative answer, a lower one will give a more deterministic answer.
+  You do not need to change any of these settings to use the SpiraApp.
+author: Inflectra Corporation
+license: MIT License
+copyright: Copyright Inflectra Corporation
+icon: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjQwNiAyNDA2Ij4KCTxwYXRoIGQ9Ik0xIDU3OC40QzEgMjU5LjUgMjU5LjUgMSA1NzguNCAxaDEyNDkuMWMzMTkgMCA1NzcuNSAyNTguNSA1NzcuNSA1NzcuNFYyNDA2SDU3OC40QzI1OS41IDI0MDYgMSAyMTQ3LjUgMSAxODI4LjZWNTc4LjR6IiBmaWxsPSIjNzRhYTljIi8+Cgk8cGF0aCBpZD0iYSIgZD0iTTExMDcuMyAyOTkuMWMtMTk3Ljk5OSAwLTM3My45IDEyNy4zLTQzNS4yIDMxNS4zTDY1MCA3NDMuNXY0MjcuOWMwIDIxLjQgMTEgNDAuNCAyOS40IDUxLjRsMzQ0LjUgMTk4LjUxNVY4MzMuM2guMXYtMjcuOUwxMzcyLjcgNjA0YzMzLjcxNS0xOS41MiA3MC40NC0zMi44NTcgMTA4LjQ3LTM5LjgyOEwxNDQ3LjYgNDUwLjNDMTM2MSAzNTMuNSAxMjM3LjEgMjk4LjUgMTEwNy4zIDI5OS4xem0wIDExNy41LS42LjZjNzkuNjk5IDAgMTU2LjMgMjcuNSAyMTcuNiA3OC40LTIuNSAxLjItNy40IDQuMy0xMSA2LjFMOTUyLjggNzA5LjNjLTE4LjQgMTAuNC0yOS40IDMwLTI5LjQgNTEuNFYxMjQ4bC0xNTUuMS04OS40Vjc1NS44Yy0uMS0xODcuMDk5IDE1MS42MDEtMzM4LjkgMzM5LTMzOS4yeiIgZmlsbD0iI2ZmZiIvPgoJPHVzZSB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJyb3RhdGUoNjAgMTIwMyAxMjAzKSIvPgogIAk8dXNlIHhsaW5rOmhyZWY9IiNhIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjAgMTIwMyAxMjAzKSIvPgoJPHVzZSB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJyb3RhdGUoMTgwIDEyMDMgMTIwMykiLz4KCTx1c2UgeGxpbms6aHJlZj0iI2EiIHRyYW5zZm9ybT0icm90YXRlKDI0MCAxMjAzIDEyMDMpIi8+Cgk8dXNlIHhsaW5rOmhyZWY9IiNhIiB0cmFuc2Zvcm09InJvdGF0ZSgzMDAgMTIwMyAxMjAzKSIvPgoKPC9zdmc+"
+version: 1.1
+
+menus:
+  - pageId: 9
+    caption: ChatGPT
+    icon: guid-13deb39d-1adb-4def-bbcb-8052c82824dc-logo
+    isActive: true
+    entries: 
+      - name: chatGPT_generateTestCases
+        caption: Generate Test Cases
+        tooltip: Generate test cases to cover key aspects of this requirement, using ChatGPT's AI model 
+        icon: icon-artifact-testcase
+        actionTypeId: 2
+        action: generateTestCases
+        isActive: true
+      - name: chatGPT_generateTasks
+        caption: Generate Tasks
+        tooltip: Generate development tasks to implement this requirement, using ChatGPT's AI model 
+        icon: icon-artifact-task
+        actionTypeId: 2
+        action: generateTasks
+        isActive: true
+      - name: chatGPT_generateSteps
+        caption: Generate BDD Scenarios
+        tooltip: Generate Gherkin syntax BDD scenarios for this requirement, using ChatGPT's AI model
+        icon: icon-artifact-requirement-step
+        actionTypeId: 2
+        action: generateSteps
+        isActive: true
+      - name: chatGPT_generateRisks
+        caption: Identify Risks
+        tooltip: Identify the key business and technical risks for this requirement, using ChatGPT's AI model
+        icon: icon-artifact-risk
+        actionTypeId: 2
+        action: generateRisks
+        isActive: true
+
+pageContents:
+  - pageId: 9
+    name: chatGPT_requirementDetails
+    code: file://requirementDetails.js
+    css: file://logo.css
+
+settingGroups:
+  - name: prompts
+    caption: ChatGPT Prompts
+  - name: regexes
+    caption: Regular Expressions
+  - name: other
+    caption: General Settings
+
+settings:
+  - settingTypeId: 1
+    name: api_key
+    caption: API Key
+    isSecure: true
+    position: 1
+    tooltip: The API Key for accessing OpenAI, created inside your OpenAI account
+  - settingTypeId: 1
+    name: organization
+    caption: Organization
+    position: 2
+    tooltip: The Organization in OpenAI that you want to link this API request to (optional)
+    placeholder: org-xxxxxxxxxxxxxxxxxxx
+
+productSettings:
+  - settingTypeId: 1
+    settingGroup: prompts
+    name: testcase_prompt
+    caption: Test Case Prompt
+    position: 1
+    placeholder: Write the test cases for the following software requirement. For each test case include the description, input and expected output.
+    tooltip: This prompt is used to generate the test cases from the requirement.
+
+  - settingTypeId: 1
+    settingGroup: prompts
+    name: task_prompt
+    caption: Task Prompt
+    position: 2
+    placeholder: Write the development tasks for the following software requirement.
+    tooltip: This prompt is used to generate the tasks from the requirement.
+
+  - settingTypeId: 1
+    settingGroup: prompts
+    name: risk_prompt
+    caption: Risk Prompt
+    position: 3
+    placeholder: Identity the possible business and technical risks for the following software requirement.
+    tooltip: This prompt is used to generate the risks from the requirement.
+
+  - settingTypeId: 1
+    settingGroup: prompts
+    name: bdd_prompt
+    caption: BDD Prompt
+    position: 4
+    placeholder: Write the BDD scenarios for the following software requirement.
+    tooltip: This prompt is used to generate the BDD steps for the requirement.
+
+  - settingTypeId: 1
+    settingGroup: regexes
+    name: testcase_regex
+    caption: Test Case Regex
+    position: 1
+    placeholder: >-
+      /Test case[0-9\s]*:\nDescription: (.*?)\nInput: (.*?)\nExpected Output: (.*?)\n/gsi
+    tooltip: This regular expression is used to parse the returned test cases.
+
+  - settingTypeId: 1
+    settingGroup: regexes
+    name: task_regex
+    caption: Task Regex
+    position: 2
+    placeholder: >-
+      /[0-9]*\.(.*?)\n(.*?)\n/gsi
+    tooltip: This regular expression is used to parse the returned tasks.
+
+  - settingTypeId: 1
+    settingGroup: regexes
+    name: risk_regex
+    caption: Risk Regex
+    position: 3
+    placeholder: >-
+      /[0-9]*\.(.*?)\n/gsi;
+    tooltip: This regular expression is used to parse the returned risks.
+
+  - settingTypeId: 1
+    settingGroup: regexes
+    name: bdd_regex
+    caption: BDD Regex
+    position: 4
+    placeholder: >-
+      /(Feature: (.*?))?Scenario[ 0-9]*: (.*?)^\n/gsim;
+    tooltip: This regular expression is used to parse the returned BDD steps.
+
+  - settingTypeId: 1
+    settingGroup: other
+    name: temperature
+    caption: Temperature
+    position: 1
+    placeholder: 0.2
+    tooltip: Temperature is a number between 0 and 2 (the default is 0.2). Temperature is used to control the output's randomness. A higher temperature means a more random output, a lower temperature makes the output more deterministic
+
+  - settingTypeId: 1
+    settingGroup: other
+    name: model
+    caption: Model
+    position: 2
+    placeholder: gpt-3.5-turbo
+    tooltip: The name of the OpenAI model we want to use ('gpt-3.5-turbo' is used by default)
